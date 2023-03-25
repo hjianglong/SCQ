@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.rx.scq.mapper.DeskBasedatasMapper">
+
+    <!--List<DeskBasedatasVO> img(String mac);-->
+    <select id="img" resultType="String">
+        select img
+        from  desk_basedatas
+        where mac=#{mac}
+    </select>
+
+    <!--List<DeskBasedatasVO> txtImg(String mac);-->
+    <select id="txtImg" resultType="String">
+        select txtImg
+        from  desk_basedatas
+        where mac=#{mac}
+    </select>
+
+    <!--List<DeskBasedatasVO> Limg(String mac);-->
+    <select id="Limg" resultType="String">
+        select l_img
+        from  desk_basedatas
+        where mac=#{mac}
+    </select>
+
+    <!--List<DeskBasedatasVO> Rimg(String mac);-->
+    <select id="Rimg" resultType="String">
+        select r_img
+        from  desk_basedatas
+        where mac=#{mac}
+    </select>
+
+    <!--int delete(String mac);-->
+    <delete id="delete">
+        DELETE FROM desk_basedatas WHERE mac=#{mac}
+    </delete>
+
+
+
+</mapper>
